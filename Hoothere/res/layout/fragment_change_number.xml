@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout 
+        android:id="@+id/rl_frag_change_number_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_change_number_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_change_number_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/change_number_title"
+		        android:textSize="19sp"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_change_number_labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_frag_change_number_header"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        
+        <TextView
+            android:id="@+id/txt_frag_change_number_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_text_dark_gray_666666"
+            android:textSize="19sp"
+            android:text="@string/change_number_label_1"/>
+        
+        <TextView
+            android:id="@+id/txt_frag_change_number_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_frag_change_number_label1"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_text_dark_gray_666666"
+            android:textSize="13sp"
+            android:text="@string/change_number_label_2"/>        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_change_number_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_frag_change_number_labels"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        
+        <EditText
+            android:id="@+id/edt_frag_change_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/bg_edit_light_gray_f7f7f7"
+            android:textColor="@color/color_text_dark_gray_666666"
+            android:textSize="17sp"
+            android:text=""
+            android:inputType="phone"
+            android:textColorHint="@color/color_text_gray_858585"
+            android:hint="@string/change_number_edit_hint"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_change_number_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_frag_change_number_edit"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        
+        <Button
+            android:id="@+id/btn_frag_change_number_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_round_purple"
+            android:textSize="19sp"
+            android:text="@string/change_number_button_submit"/>
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_frag_change_number_submit"
+        android:layout_marginTop="100dp"
+        android:background="@color/color_change_number_dial_bg_c0c4c8"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="1"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="2"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_2_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="ABC"/>
+	            </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_3"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="3"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_3_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="DEF"/>
+	            </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_4"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="4"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_4_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="GHI"/>
+	            </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_5"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="5"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_5_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="JKL"/>
+	            </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_6"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="6"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_6_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="MNO"/>
+	            </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        
+		<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_7"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="7"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_7_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="PQRS"/>
+	            </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_8"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="8"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_8_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="TUV"/>
+	            </RelativeLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_change_number_dial_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dial_selector"
+                android:orientation="vertical">
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+	                <TextView
+	                    android:id="@+id/text_frag_change_number_dial_9"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="22sp"
+	                    android:text="9"/>
+                </RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+	                
+                    <TextView
+	                    android:id="@+id/text_frag_change_number_dial_9_2"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@android:color/black"
+	                    android:textSize="13sp"
+	                    android:text="WXYZ"/>
+	            </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        
+		<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+            
+            <RelativeLayout
+                android:id="@+id/rl_frag_change_number_dial_plus"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+               	<TextView
+                   android:id="@+id/text_frag_change_number_dial_plus"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:textColor="@android:color/black"
+                   android:textSize="22sp"
+                   android:text="+ * #"/>
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/rl_frag_change_number_dial_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/dial_selector"
+                android:layout_marginRight="1dp">
+
+             	<TextView
+	                android:id="@+id/text_frag_change_number_dial_0"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@android:color/black"
+	                android:textSize="22sp"
+	                android:text="0"/>
+            </RelativeLayout>
+
+           <RelativeLayout
+				android:id="@+id/rl_frag_change_number_backspace"               
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+               	<ImageView
+	                android:id="@+id/iv_frag_change_number_dial_backspace"
+	                android:layout_width="33dp"
+	                android:layout_height="20dp"
+	                android:layout_centerInParent="true"
+	                android:src="@drawable/icon_backspace"
+	                android:scaleType="fitCenter"/>
+            </RelativeLayout>
+        </LinearLayout>        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_change_number_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_forgot_pwd_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_forgot_pwd_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_forgot_pwd_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/forgot_pwd_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<LinearLayout 
+	    android:id="@+id/ll_frag_forgot_pwd_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/rl_frag_forgot_pwd_header"
+		android:padding="20dp"
+	    android:orientation="vertical">
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_forgot_pwd_content_email"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_forgot_pwd_content_email"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="textEmailAddress"
+	            android:hint="@string/forgot_pwd_email_hint"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_forgot_pwd_content_description"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="30dp">
+	        
+	        <TextView
+	            android:id="@+id/txt_frag_forgot_pwd_content_description"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:textSize="16sp"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:text="@string/forgot_pwd_description"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_forgot_pwd_content_submit"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="50dp">
+	        
+	        <Button
+	            android:id="@+id/btn_frag_forgot_pwd_content_submit"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="5dp"
+	            android:paddingBottom="5dp"
+	            android:textColor="@android:color/white"
+	            android:textSize="17sp"
+	            android:text="@string/change_number_button_submit"
+	            android:background="@drawable/bg_round_purple"/>
+	    </RelativeLayout>
+	</LinearLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_forgot_pwd_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

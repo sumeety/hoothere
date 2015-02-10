@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res/com.sumeet.hoothere"
+    android:background="@drawable/listview_selector_gray">
+    
+	<RelativeLayout 
+	    android:id="@+id/rl_invite_friends_rowitem_contents"
+	    android:layout_width="match_parent"
+	    android:layout_height="70dp"
+	    android:layout_centerVertical="true">
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_invite_friends_rowitem_avatar"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+
+	            <ImageView	            
+                    android:id="@+id/iv_invite_friends_rowitem_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/icon_temp_avatar1"
+                    android:scaleType="centerCrop"/>
+	            
+	            <ImageView
+	                android:id="@+id/iv_invite_friends_rowitem_avatar_cover_white"
+	                android:layout_width="60dp"
+	                android:layout_height="60dp"
+	                android:src="@drawable/icon_avatar_cover_white"
+	                android:scaleType="centerCrop"/>
+	        </RelativeLayout>
+	        
+	        <LinearLayout 
+	            android:id="@+id/ll_invite_friends_rowitem_name_status"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="4"
+	            android:paddingLeft="10dp"
+	            android:paddingRight="10dp"
+	            android:paddingTop="5dp"
+	            android:paddingBottom="5dp"
+	            android:orientation="vertical">
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_invite_friends_rowitem_name"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1">
+	                
+					<TextView
+					    android:id="@+id/txt_invite_friends_rowitem_name"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_centerVertical="true"
+					    android:layout_marginLeft="2dp"
+					    android:textColor="@color/color_text_dark_gray_666666"
+					    android:textSize="18sp"
+					    android:text="A"/>
+	            </RelativeLayout>
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_invite_friends_rowitem_status"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1"
+	                android:visibility="gone">
+	                
+	                <ImageView
+	                    android:id="@+id/iv_invite_friends_rowitem_status"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:paddingTop="7dp"
+	                    android:paddingBottom="7dp"
+	                    android:src="@drawable/icon_status_busy"
+	                    android:scaleType="fitCenter"/>
+	                
+					<TextView
+					    android:id="@+id/txt_invite_friends_rowitem_status"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_centerVertical="true"
+					    android:layout_toRightOf="@+id/iv_invite_friends_rowitem_status"
+					    android:layout_marginLeft="5dp"
+					    android:textColor="@color/color_text_dark_gray_666666"
+					    android:textSize="15sp"
+					    android:text="A"/>
+	            </RelativeLayout>
+	        </LinearLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/ll_invite_friends_rowitem_action"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	            <ImageView
+		            android:id="@+id/iv_invite_friends_rowitem_friend_status"
+		            android:layout_width="125dp"
+		            android:layout_height="36dp"
+		            android:layout_centerInParent="true"
+		            android:src="@drawable/invited_blue"
+		            android:scaleType="fitCenter"/>
+	            
+		        <ImageView
+		            android:id="@+id/iv_invite_friends_rowitem_action_check"
+		            android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_marginRight="5dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_checkmark_uncheck"
+		            android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

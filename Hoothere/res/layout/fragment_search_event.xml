@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_search_event_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_search_event_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_search_event_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/search_event_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<LinearLayout 
+        android:id="@+id/ll_frag_search_event_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_frag_search_event_header"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+		
+        <RelativeLayout 
+            android:id="@+id/rl_frag_search_event_search_hint"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="@color/color_light_gray_f7f7f7">
+            
+            <RelativeLayout
+                android:id="@+id/rl_frag_search_event_search_hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="5dp">
+                
+                <ImageView
+                    android:id="@+id/iv_frag_search_event_search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_search"
+                    android:scaleType="fitCenter"/>
+                
+                <TextView
+                    android:id="@+id/txt_frag_search_event_search_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"	                    
+                    android:layout_toRightOf="@+id/iv_frag_search_event_search_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_search_hint"
+                    android:textSize="17sp"
+                    android:text="@string/search_event_hint"/>                    
+            </RelativeLayout>
+            
+            <EditText
+                android:id="@+id/edt_frag_search_event_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/color_text_dark_gray_666666"
+                android:text=""
+                android:textColorHint="@color/color_text_gray_858585"
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/rl_frag_search_event_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp">
+            
+            <TextView
+                android:id="@+id/txt_frag_search_event_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_text_gray_858585"
+                android:textSize="18sp"
+                android:text="@string/search_event_cancel"
+                android:singleLine="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/rl_frag_search_event_contents"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/ll_frag_search_event_search">
+	    
+	    <ListView
+            android:id="@+id/lv_frag_search_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"	        
+            android:transcriptMode="disabled"
+            android:clipToPadding="false"/>
+	</RelativeLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_search_event_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

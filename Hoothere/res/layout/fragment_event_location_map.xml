@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout 
+        android:id="@+id/rl_frag_event_location_map_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_event_location_map_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_event_location_map_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:layout_marginLeft="40dp"
+		        android:gravity="center"
+		        android:text=""
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"
+		        android:singleLine="true"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_event_location_map_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_frag_event_location_map_header"
+        android:layout_above="@+id/ll_frag_event_location_map_actions">
+        
+        <fragment
+            android:id="@+id/map_frag_event_location_map_destination"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+        <RelativeLayout 
+            android:id="@+id/rl_frag_event_location_map_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_frag_event_location_map_type_current"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_round_white_10">
+                
+                <TextView
+                    android:id="@+id/txt_frag_event_location_map_type_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/color_purple"
+                    android:textSize="13sp"
+                    android:text="@string/map_type_normal"/>
+            </RelativeLayout>
+            
+            <LinearLayout 
+                android:id="@+id/ll_frag_event_location_map_type"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_frag_event_location_map_type_current"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_round_white_10"
+                android:orientation="vertical">
+                
+                <RelativeLayout 
+                    android:id="@+id/rl_frag_event_location_map_type_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="3dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_frag_event_location_map_type_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/color_purple"
+                        android:textSize="15dp"
+                        android:text="@string/map_type_normal"/>
+                    
+                </RelativeLayout>
+                
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/color_divider_light_gray"/>
+                
+                <RelativeLayout 
+                    android:id="@+id/rl_frag_event_location_map_type_satellite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_frag_event_location_map_type_satellite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/color_purple"
+                        android:textSize="15dp"
+                        android:text="@string/map_type_satellite"/>
+                </RelativeLayout>
+                
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/color_divider_light_gray"/>
+                
+                <RelativeLayout 
+                    android:id="@+id/rl_frag_event_location_map_type_hybrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_frag_event_location_map_type_hybrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/color_purple"
+                        android:textSize="15dp"
+                        android:text="@string/map_type_hybrid"/>
+                </RelativeLayout>
+                
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/color_divider_light_gray"/>
+                
+                <RelativeLayout 
+                    android:id="@+id/rl_frag_event_location_map_type_terrain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_frag_event_location_map_type_terrain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/color_purple"
+                        android:textSize="15dp"
+                        android:text="@string/map_type_terrain"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout 
+		    android:id="@+id/rl_map_frag_event_location_map_range"
+		    android:layout_width="10dp"
+		    android:layout_height="10dp"
+		    android:layout_centerInParent="true"
+		    android:background="@drawable/destination_range"
+		    android:visibility="gone"/>
+        
+        
+        <RelativeLayout 
+            android:id="@+id/map_frag_event_location_map_destination_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_map_frag_event_location_map_destination_marker"
+                android:layout_width="20dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_destination_pin_purple"
+                android:scaleType="fitCenter"/>
+            
+            <RelativeLayout 
+                android:layout_width="20dp"
+                android:layout_height="27dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/iv_map_frag_event_location_map_destination_marker"/>
+        </RelativeLayout>
+        
+        <SeekBar
+            android:id="@+id/sb_frag_event_location_map_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_event_location_map_divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/ll_frag_event_location_map_actions">
+        
+        <ImageView
+            android:id="@+id/iv_frag_event_location_map_divider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/map_footer_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/ll_frag_event_location_map_actions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@android:color/white">
+        
+        <RelativeLayout 
+            android:id="@+id/rl_frag_event_location_map_actions_skip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            
+            <Button
+                android:id="@+id/btn_frag_event_location_map_actions_skip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/color_purple"
+                android:textSize="18sp"
+                android:text="@string/frag_event_location_map_skip"
+                android:background="@drawable/bg_round_white_10"/>
+        </RelativeLayout>
+        
+		<RelativeLayout 
+            android:id="@+id/rl_frag_event_location_map_actions_done"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            
+            <Button
+                android:id="@+id/btn_frag_event_location_map_actions_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"
+                android:text="@string/frag_event_location_map_done"
+                android:background="@drawable/bg_round_purple"/>
+        </RelativeLayout>        
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_event_location_map_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

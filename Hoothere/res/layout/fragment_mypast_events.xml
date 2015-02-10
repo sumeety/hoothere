@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:id="@+id/rl_frag_mypast_events_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_mypast_events_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_mypast_events_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/mypast_events_header_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/rl_frag_mypast_events_events"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/rl_frag_mypast_events_header"
+	    android:background="@android:color/white">
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_mypast_events_events_no_events"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:visibility="gone">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_mypast_events_events_no_events_bg"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="5">
+				
+	            <ImageView
+	                android:id="@+id/iv_frag_mypast_events_events_no_events_bg"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_margin="30dp"
+	                android:src="@drawable/no_event_book"
+	                android:scaleType="fitCenter"/>	            
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_mypast_events_events_no_events_title"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1">
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_mypast_events_events_no_events_title"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="25sp"
+	                android:text="@string/no_event_available"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_mypast_events_events_no_events_hint"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1">
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_mypast_events_events_no_events_hint"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:gravity="center"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="18sp"
+	                android:text="@string/no_event_hint"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_mypast_events_events_no_event_create"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="3">
+	            
+	            <Button
+	                android:id="@+id/btn_frag_mypast_events_events_no_event_create"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_margin="20dp"
+	                android:layout_alignParentBottom="true"
+	                android:padding="5dp"
+	                android:textColor="@android:color/white"
+	                android:textSize="20sp"
+	                android:text="@string/no_event_create"
+	                android:background="@drawable/bg_round_purple"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <ListView
+            android:id="@+id/lv_frag_mypast_events_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"	        
+            android:divider="@android:color/transparent"
+            android:transcriptMode="disabled"
+            android:clipToPadding="false"/>
+	</RelativeLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_mypast_events_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

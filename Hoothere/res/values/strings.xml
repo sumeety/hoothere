@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+        <!-- facebook app id -->
+    <string name="test_appid">1376619469306276</string>
+    
+    <string name="main_tabbar_footer_events">Events</string>
+    <string name="main_tabbar_footer_friends">Friends</string>
+    <string name="main_tabbar_footer_notifications">Notifications</string>
+    <string name="main_tabbar_footer_me">Me</string>
+    
+    <string name="gmap_api_key_on_my_mac">AIzaSyAqK3euZkbKu69qEnkiGOTq1FfKJNT25ag</string>
+
+    <string name="app_name">Hoothere</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="tab_header_main_title_hoothere">Events</string>
+    <string name="tab_header_main_title_hoohere">Friends</string>
+    
+    <string name="change_status_want">Looking for plans</string>
+    <string name="change_status_available">Available</string>
+    <string name="change_status_go_out">Going out</string>
+    <string name="change_status_busy">Busy</string>
+    <string name="hosted_by">Hosted by</string>
+    <string name="invited_title">Invited</string>
+    <string name="join_title">Join</string>
+    <string name="going_title">Going There</string>
+    <string name="hoo_title">Hoo There</string>
+    <string name="hoocame_title">Hoo Came</string>
+    <string name="past_event">Past Event</string>
+    <string name="event_status_accepted">Accepted</string>
+    <string name="event_status_went_there">Went There</string>
+    <string name="no_event_available">No Event Available</string>
+    <string name="no_event_hint">There is no event in your list, do you want to add event in your list?</string>
+    <string name="no_event_create">Create Event</string>
+    <string name="event_status_pending">Pending</string>
+    <string name="event_status_invited">Invited</string>
+    <string name="logo_title">When good people come together, great things happen.</string>
+    <string name="logo_thanks">Thank you for trying out the Hoothere Android Beta!</string>
+    <string name="logo_get_started">Get Started</string>
+    <string name="logo_login">Have an account? Log In</string>
+    <string name="change_number_title">Change Number</string>
+    <string name="change_number_label_1">Please re-enter your phone number</string>
+    <string name="change_number_label_2">The verification code will be sent to this number.</string>
+    <string name="change_number_button_submit">Submit</string>
+    <string name="change_number_edit_hint">Please enter your phone number</string>
+    <string name="search_hint">Search</string>
+    <string name="pending_text">Pending</string>
+    <string name="you">You</string>
+    <string name="signin_title">Sign In</string>
+    <string name="signin_email_hint">Email</string>
+    <string name="signin_pwd_hint">Password</string>
+    <string name="signin_forgot_pwd">Forgot Password</string>
+    <string name="signin_button_title">Sign In</string>
+    <string name="date_not_specified">Date Not Specified</string>
+    <string name="map_type_hybrid">Hybrid</string>
+    <string name="map_type_satellite">Satellite</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="event_type_private">Private Event</string>
+    <string name="event_type_public">Public Event</string>
+    <string name="accept_event">Accept</string>
+    <string name="check_in_event">Check In</string>
+    <string name="checked_in_event">Checked-In</string>
+    <string name="mypast_events">Past Events</string>
+    
+    <string name="othere_profile_title">User Profile</string>
+
+<!-- Events Page Strings -->
+	<string name="hoothere_title">Hoothere</string>
+    
+<!-- Fragment for Friends Strings -->
+	<string name="friends_header_title">Friends</string>    
+    
+<!-- Search Event strings -->
+    <string name="search_event_title">Search Event</string>
+    <string name="search_event_hint">Search for an event</string>
+    <string name="search_event_cancel">Cancel</string>
+    
+<!--Event Detail Page strings -->
+	<string name="event_detail_title">Event Detail</string>
+	<string name="event_detail_edit">Edit</string>
+	<string name="event_detail_seeall">See All</string>
+	<string name="event_detail_cancel">Cancel</string>
+	<string name="event_detail_join">Join Event</string>
+	<string name="event_detail_invite_friends">Invite friends</string>    
+	
+<!-- Event Members Page strings -->
+	<string name="event_members_title">0 Going there</string>
+	<string name="event_members_your_friends">Your Friends</string>
+	<string name="event_members_new_connections">New Connections</string>
+	
+<!-- Edit Event Page Strings -->
+	<string name="edit_event_title">Edit Event</string>
+	<string name="edit_event_content_title">Title</string>
+	<string name="edit_event_content_description">Description</string>
+	<string name="edit_event_content_starts_from">Starts from</string>
+	<string name="edit_event_content_ends_on">Ends on</string>
+	<string name="edit_event_content_event_locaiton">Event Location</string>
+	<string name="edit_event_content_venue_title">Venue Name</string>
+	<string name="edit_event_content_street_address">Street Address</string>
+	<string name="edit_event_content_city">City</string>
+	<string name="edit_event_content_state">State</string>
+	<string name="edit_event_content_country">Country</string>
+	<string name="edit_event_content_zipcode">Zipcode</string>
+	<string name="edit_event_content_geofence">Set Geofence</string>
+	<string name="edit_event_content_save">Save</string>
+	<string name="edit_event_content_switch_title">Do you want other people to be able to search and join this event?</string>		
+	
+<!-- My Profile Pgae Strings -->
+	<string name="my_profile_title">My Profile</string>
+	<string name="change_pwd">Password</string>
+	<string name="my_hosted_events">My Hosted Events</string>
+	<string name="my_profile_logout">Logout</string>
+	<string name="verified">Verified</string>
+	<string name="verify">Verify</string>
+	
+<!-- FB Signup Strings -->
+	<string name="signup_fb_title">Sign Up With Facebook</string>
+	<string name="signup_fb_proceed">Proceed</string>
+	<string name="signup_fb_mobile_hint">Mobile Number</string>
+	<string name="signup_fb_message">Please enter your phone number to complete the registration process.</string>
+	
+<!-- Signin Page Strings -->
+	<string name="signin_fb_btn">Sign In With Facebook</string>	
+		
+<!-- Change Pwd Strings -->
+	<string name="change_pwd_title">Change Password</string>
+	<string name="change_pwd_current_pwd">Current Password</string>
+	<string name="change_pwd_new_pwd">New Password</string>
+	<string name="change_pwd_confirm_pwd">Confirm Password</string>
+	<string name="change_pwd_cancel">Cancel</string>
+	<string name="change_pwd_save">Save</string>
+	
+<!-- Reside Menu Strings -->
+	<string name="reside_menu_item_events">Events</string>
+	<string name="reside_menu_item_friends">Friends</string>
+	<string name="reside_menu_item_settings">Settings</string>
+	<string name="reside_menu_logout">Logout</string>	
+	
+<!-- Friends Page Strings -->
+	<string name="you_are_alone">You are alone here</string>
+	<string name="click_search_button">Click on search button to search your friends.</string>	
+	
+<!-- Forgot Pwd Strings -->
+	<string name="forgot_pwd_title">Forgot Password</string>
+	<string name="forgot_pwd_email_hint">Email</string>
+	<string name="forgot_pwd_description">Enter your Hoothere Email Id. We will send an email to this with the new password.</string>
+	
+<!-- Other Profile Strings -->
+	<string name="other_profile_title"></string>
+	<string name="other_profile_action_remove">Remove Friend</string>
+	<string name="other_profile_action_send_request">Send Friend Request</string>
+	<string name="other_profile_action_pending_request">Pending Request</string>	
+	
+<!-- Create Event Name Strings -->
+	<string name="ce_name_title">Create Event</string>
+	<string name="ce_name_hint">Create your own</string>
+	<string name="ce_name_event_hint">Name of your event</string>
+	<string name="ce_name_description_hint">Description</string>
+	<string name="ce_name_search">Search for event</string>		
+	<string name="ce_name_create">Create</string>
+	<string name="ce_name_cancel">Cancel</string>
+	
+<!-- Create Event Date Strings -->
+	<string name="ce_date_title">Event Date</string>
+	<string name="ce_date_start">Starting From</string>
+	<string name="ce_date_end">Ending On</string>
+	<string name="ce_date_skip">Skip</string>
+	<string name="ce_date_next">Next</string>	
+	<string name="ce_date_no_date">No Date Selected</string>
+	<string name="ce_date_hint_start">Please select the start date of your event</string>
+	<string name="ce_date_hint_end">Please select the end date of your event</string>
+	
+<!-- Select Address Type Page strings -->
+	<string name="ad_search">Search For Location</string>
+	<string name="ad_enter_yourself">Enter Address Yourself</string>
+	<string name="ad_or">Or</string>	
+	
+<!-- Enter Address Manually Page Strings -->
+	<string name="am_get_current_location">Click location icon to get your current location</string>
+	<string name="am_skip">Skip</string>
+	<string name="am_next">Next</string>
+	
+<!-- Search Location Page Strings -->
+	<string name="search_location_title">Search Venue Location</string>
+	<string name="search_location_cancel">Cancel</string>	
+	
+<!-- Notifications Page Strings -->
+	<string name="notification_title">Notifications</string>	
+	<string name="loading_more_notifications">Loading more notifications...</string>
+	
+<!-- SignUp Page Strings -->	
+	<string name="signup_title">Sign Up</string>
+	<string name="signup_hint_firstname">First Name</string>
+	<string name="signup_hint_email">Email</string>
+	<string name="signup_hint_mobile_number">Mobile Number</string>
+	<string name="signup_hint_password">Password</string>
+	<string name="signup_hint_confirm_pwd">Confirm Password</string>
+	<string name="signup_or">Or</string>
+	<string name="signup_create_account">Create Account</string>
+	<string name="signup_fb_sign">Sign Up With Facebook</string>
+	<string name="signup_terms_of_use_title">By logging in, I am agreeing to Hoothere\'s </string>
+	<string name="signup_terms_of_use">Terms Of Services</string>
+	
+<!--Verify Phone Number Strings  -->
+	<string name="verify_number_title">Verify Your Number</string>
+	<string name="verify_number_alert">Enter your verification code</string>
+	<string name="verify_number_hint1">It will arrive shortly via text message on</string>
+	<string name="verify_number_hint2">your number</string>
+	<string name="verify_number_code_hint">Verification</string>
+	<string name="verify_number_not_received_yet">Not received code yet?</string>
+	<string name="verify_number_change">Change Number</string>	
+	
+<!-- My Past Events Page Strings -->	
+	<string name="mypast_events_header_title">My Past Events</string>
+	
+<!-- Upcoming Events Page Strings -->	
+	<string name="upcoming_events_title">Upcoming Events</string>
+	<string name="invite">Invite</string>
+	
+<!-- Invite Friends Page Strings -->
+	<string name="invite_friends_title">Invite Friends</string>	
+	<string name="invite_friends_invite">Invite Now</string>
+	<string name="invite_friends_inviting">Inviting...</string>
+	
+<!-- Event Location Map Strings -->	
+	<string name="frag_event_location_map_skip">Skip</string>
+	<string name="frag_event_location_map_done">Done</string>
+	
+<!-- Alert Dialog Strings -->
+	<string name="alert_dlg_no_internet_connection">Internet connection error! Please check your Internet Connection.</string>
+	<string name="alert_dlg_title_hoothere">Hoothere</string>
+	<string name="alert_dlg_fb_signup_empty_email">Email Address cannot be blank.</string>
+	<string name="alert_dlg_fb_signup_empty_mobile">Mobile number cannot be blank.</string>
+	<string name="alert_dlg_fb_signup_error">An error occurred while signing in Facebook.</string>
+	<string name="alert_dlg_unable_to_share_image">Unable to share image right now.</string>
+	<string name="alert_dlg_share_image_error">An error occurred while sharing image.</string>
+	<string name="alert_dlg_display_event_members_error">An error occurred while displaying event members.</string>
+	<string name="alert_dlg_message_ce">Please enter event name and its description.</string>
+	<string name="alert_dlg_fb_signin_prior">You should login with Facebook.</string>	
+	<string name="alert_dlg_btn_ok">OK</string>
+	<string name="alert_dlg_ya_sure">Ya Sure</string>
+	<string name="alert_dlg_yes">Yes</string>
+	<string name="alert_dlg_cancel">Cancel</string>
+	<string name="alert_dlg_done">Done</string>
+	<string name="alert_dlg_message_ce_date">If you don\'t set the time then we won\'t be able to let you know when people get to your event. Skip Anyway?</string>
+	<string name="alert_dlg_message_ce_date_invalid_start">Please enter a valid start date of an event.</string>
+	<string name="alert_dlg_message_ce_date_invalid_end">Please enter a valid end date of an event.</string>
+	<string name="alert_dlg_message_ce_date_start_later_than_end">Please enter end date later than start date.</string>
+	<string name="alert_dlg_message_ce_date_start_earlier_than_now">Please enter start date later than now.</string>
+	<string name="alert_unknown_error">Unknown error occurred during operation.</string>
+	<string name="facebook_coming_soon">Facebook feature is coming soon.</string>
+	<string name="enter_first_name">Enter your first name.</string>
+	<string name="enter_valid_email">Enter a valid email address.</string>
+	<string name="enter_valid_number">Enter a valid number</string>
+	<string name="enter_valid_password">Password cannot be blank.</string>
+	<string name="password_mismatch">Password mismatch</string>
+	<string name="alert_title_error">Error</string>
+	<string name="alert_dlg_signin_error">An error occurred during signing in.</string>
+	<string name="alert_dlg_signup_error">An error occurred during registering.</string>
+	<string name="alert_dlg_verify_error">An error occurred during verifying.</string>
+	<string name="alert_dlg_inviting_single_error">An error occurred during inviting.</string>
+	<string name="alert_dlg_inviting_single_success">An invitation has been successfully sent to your friend.</string>
+	<string name="alert_dlg_inviting_multi_success">Invitation has been successfully sent to your friends.</string>
+	<string name="alert_dlg_adding_friend_error">An error occurred during adding friend.</string>
+	<string name="alert_dlg_adding_friend_success">A friend request has been sent successfully.</string>
+	<string name="alert_dlg_removing_friend_success">This user is removed from your friend list.</string>
+	<string name="alert_dlg_removing_friend_error">An error occurred during removing friend.</string>
+	<string name="alert_dlg_accept_friend_request_success">This user is added to your friend list.</string>
+	<string name="alert_dlg_accept_friend_request_error">An error occurred during accepting friend request.</string>
+	<string name="alert_dlg_reject_friend_request_success">Friend request from this user is declined.</string>
+	<string name="alert_dlg_reject_friend_request_error">An error occurred during rejecting friend request.</string>
+	<string name="alert_dlg_hoot_friend_request_error">An error occurred during hooting friend request.</string>
+	<string name="alert_dlg_change_pwd_success">Password has been changed successfully.</string>
+	<string name="alert_dlg_change_pwd_error">An error occurred during changing password.</string>
+	<string name="alert_dlg_update_profile_success">Your profile saved successfully.</string>
+	<string name="alert_dlg_update_profile_error">An error occurred during updating your profile.</string>
+	<string name="alert_dlg_change_number_success">Your number has been changed successfully.</string>
+	<string name="alert_dlg_change_number_error">An error occurred during changing number.</string>
+	<string name="alert_dlg_location_map_skip">If you don\'t set the location then we won\'t be able to let you know when people get to your event. Skip Anyway? </string>
+	<string name="alert_dlg_manual_location_empty">Please fill all details about venue.</string>
+	<string name="alert_dlg_manual_location_unable_connect_service">We were unable to connect to the required services. Please try again later.</string>
+	<string name="alert_dlg_manual_location_wrong_address">Address you entered is incorrect.\nPlease enter correct address.</string>
+	<string name="alert_dlg_event_album_delete_confirm">Are you sure you want to delete this image from event album?</string>
+	<string name="alert_dlg_event_album_delete_error">An error occurred while deleting event image.</string>
+	<string name="alert_dlg_event_album_set_as_success">This image has been set as the event image successfully.</string>
+	<string name="alert_dlg_event_album_set_as_error">An error occurred while setting as the event image.</string>
+	<string name="alert_dlg_event_album_save_success">This image has been saved to your photos album.</string>
+	<string name="alert_dlg_event_album_save_error">An error occurred while saving this image.</string>
+	<string name="alert_dlg_accept_event_success">You have accepted the event successfully.</string>
+	<string name="alert_dlg_accept_event_error">An error occurred while accepting the event.</string>
+	<string name="alert_dlg_getting_notifications_error">An error occurred while getting notifications.</string>
+	<string name="alert_dlg_modify_event_success">This event has been modified successfully.</string>
+	<string name="alert_dlg_modify_event_error">An error occurred in modifying this event.</string>
+	<string name="alert_dlg_retrieve_current_location_error">An error occurred during retrieving current location.</string>
+	<string name="alert_dlg_common_error">An error occurred during operation.</string>
+	<string name="alert_dlg_checkin_event_error">An error occurred while checking in this event.</string>
+	<string name="alert_dlg_join_event_success">You have joined this event successfully.</string>
+	<string name="alert_dlg_join_event_error">An error occurred while joining this event.</string>	
+	<string name="alert_dlg_uploading_ea_error">An error occurred while uploading event album.</string>
+	<string name="alert_dlg_get_upcoming_events_error"></string>
+	<string name="alert_dlg_forgot_pwd_success">A new password is generated and sent to your email.</string>
+	<string name="alert_dlg_uploading_photo_error">An error occurred while uploading your photo.</string>
+	<string name="alert_dlg_search_event_error">An error occurred while searching event.</string>
+	<string name="alert_dlg_verify_number_alert_enter_code">You should enter the verification code.</string>
+	<string name="alert_dlg_verify_signin_signup_prior">You should signin or signup before verification.</string>
+	<string name="alert_dlg_verify_success">You have been verified successfully.</string>
+	<string name="alert_dlg_modify_event_enter_title">Please enter the title of event.</string>
+	<string name="alert_dlg_modify_event_enter_description">Please enter the description of event.</string>
+	<string name="alert_dlg_modify_event_enter_address">Please enter the address of event.</string>
+	<string name="alert_dlg_modify_event_enter_venue">Please enter the venue of event.</string>
+	<string name="alert_dlg_change_number_title">Confirm Your Number</string>
+	<string name="alert_dlg_change_pwd_blank_pwd">Password can not be blank!</string>
+	<string name="alert_dlg_change_pwd_not_equal_pwd">Password do not match!</string>
+	<string name="alert_dlg_event_detail_event_not_started_title">Check-In not allowed</string>
+	<string name="alert_dlg_event_detail_event_not_started">This event is not started yet.</string>
+	<string name="alert_dlg_signup_verify">If you entered in your number incorrectly without verifying, you could miss out on some important notifications.Do you want to verify your number?</string>
+	<string name="alert_dlg_signup_verify_skip">Skip</string>
+	<string name="alert_dlg_signup_verify_sure">Ya Sure!</string>
+	<string name="alert_dlg_please_wait_until_fb_init">Please wait until Facebook initialization.</string>
+	
+<!-- Toast String -->
+	<string name="toast_crop_not_supported">Your device doesn\'t support the crop action!</string>	
+	
+	<!-- ProgressDialog Strings -->
+	<string name="progress_setting_as_event_image">Setting as the event image...</string>
+	<string name="progress_getting_current_location">Getting current location...</string>
+	<string name="progress_modifying_event">Modifying event...</string>
+	<string name="progress_sending_request">Sending Request...</string>
+	<string name="progress_updating_pwd">Updating Password...</string>
+	<string name="progress_loading">Loading...</string>
+	<string name="progress_creating_event">Creating Event...</string>
+	<string name="progress_deleting">Deleting...</string>
+	<string name="progress_checkingin_event">Checking in this event...</string>
+	<string name="progress_accepting_invitation">Accepting invitation...</string>
+	<string name="progress_joining_event">Joining event...</string>
+	<string name="progress_uploading_eventimage">Uploading...</string>
+	<string name="progress_adding_friend">Adding Friend...</string>
+	<string name="progress_hooting">Hooting...</string>
+	<string name="progress_accepting">Accepting...</string>
+	<string name="progress_declining">Declining...</string>
+	<string name="progress_inviting">Inviting...</string>
+	<string name="progress_updating_profile">Updating your profile...</string>
+	<string name="progress_removing_friend">Removing friend...</string>
+	<string name="progress_searching_event">Searching events...</string>
+	<string name="progress_signing_in">Signing in...</string>
+	<string name="progress_registering">Registering...</string>
+	<string name="progress_verifying">Verifying...</string>
+	<string name="progress_sending_request">Sending friend request...</string>
+	
+	<!-- New Strings for V2 -->
+	<string name="actionsheet_choose_from_library">Choose from Library</string>
+	<string name="actionsheet_take_picture">Take Picture</string>
+	<string name="actionsheet_save_image">Save Image</string>
+	<string name="actionsheet_share_image">Share Image</string>
+	<string name="actionsheet_delete_image">Delete Image</string>
+	<string name="actionsheet_set_as_eventimage">Set As Event Image</string>
+	
+	<string name="eventalbum_slideshow_saveimage_success">This image has been saved to your Photos album.</string>
+	
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res/com.sumeet.hoothere"
+    android:background="@android:color/black">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_eventalbums_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_eventalbums_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_eventalbums_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text=""
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_eventalbums_header_action"
+		        android:layout_width="25dp"
+		        android:layout_height="40dp"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentRight="true"
+		        android:src="@drawable/icon_upload_white"
+		        android:scaleType="fitCenter"/>
+		    
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<RelativeLayout 
+	    android:id="@+id/rl_frag_eventalbums_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/rl_frag_eventalbums_header">
+	    
+	    <RelativeLayout 
+            android:id="@+id/rl_frag_eventalbums_albums"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+			<org.taptwo.android.widget.ViewFlow
+				android:id="@+id/vf_frag_eventalbums_content" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				app:sidebuffer="3"/>
+			
+			<org.taptwo.android.widget.CircleFlowIndicator
+				android:layout_height="15dp"
+				android:layout_width="wrap_content"
+				android:id="@+id/vfi_frag_eventalbums_content"
+				android:layout_centerHorizontal="true"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="80dp"
+				app:inactiveType="fill"
+				app:radius="5dp"
+				app:fadeOut="2000"/>
+        </RelativeLayout>
+
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_eventalbums_info"
+	        android:layout_width="match_parent"
+	        android:layout_height="80dp"
+	        android:paddingLeft="20dp"
+	        android:layout_alignParentBottom="true"
+	        android:orientation="vertical"
+	        android:background="#55000000">
+	        
+	        <LinearLayout 
+	            android:id="@+id/ll_frag_eventalbums_info_owner"
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:orientation="horizontal">
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_frag_eventalbums_info_by"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent">
+	                
+	                <TextView
+	                    android:id="@+id/txt_frag_eventalbums_info_by"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="16sp"
+	                    android:text="by"/>
+	            </RelativeLayout>
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_frag_eventalbums_info_avatar"
+	                android:layout_width="40dp"
+	                android:layout_height="match_parent">
+	                
+	                <com.sumeet.hoothere.ui.CircularImageView
+	                    android:id="@+id/iv_frag_eventalbums_info_avatar"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:layout_margin="5dp"
+	                    android:src="@drawable/defaultpic"
+	                    android:scaleType="fitCenter"
+	                    app:border_width="0dp"/>
+	            </RelativeLayout>
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_frag_eventalbums_info_name"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent">
+	                
+	                <TextView
+	                    android:id="@+id/txt_frag_eventalbums_info_name"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true"
+	                    android:singleLine="true"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="16sp"
+	                    android:text=""/>
+	            </RelativeLayout>
+	        </LinearLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_eventalbums_info_time"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1">
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_eventalbums_info_time"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:textColor="@android:color/white"
+	                android:textSize="16sp"
+	                android:text=""/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

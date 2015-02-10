@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_myprofile_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_myprofile_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"
+		        android:visibility="gone"/>
+		    
+   		    <TextView
+		        android:id="@+id/txt_frag_myprofile_header_logout"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:text="@string/my_profile_logout"
+		        android:textSize="18sp"
+		        android:textColor="@android:color/white"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_myprofile_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/my_profile_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		    
+   		    <TextView
+		        android:id="@+id/txt_frag_myprofile_header_save"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:layout_alignParentRight="true"
+		        android:gravity="center"
+		        android:text="Save"
+		        android:textSize="18sp"
+		        android:textColor="@android:color/white"
+		        android:visibility="gone"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<LinearLayout 
+	    android:id="@+id/ll_frag_myprofile_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/rl_frag_myprofile_header"
+	    android:orientation="vertical">
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_myprofile_content_avatar"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="4"
+	        android:background="@color/color_change_number_dial_bg_c0c4c8">
+	        
+	        <ImageView
+	            android:id="@+id/iv_frag_myprofile_content_avatar"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/defaultpic_large"
+	            android:scaleType="fitCenter"/>
+	        
+	        <ImageView
+	            android:id="@+id/iv_frag_myprofile_content_avatar_camera"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="20dp"
+	            android:layout_marginTop="10dp"
+	            android:src="@drawable/icon_camera"
+	            android:scaleType="fitCenter"/>
+	    </RelativeLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:layout_marginTop="20dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_name"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <EditText
+	                android:id="@+id/edt_frag_myprofile_content_name"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:singleLine="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="22sp"
+	                android:text=""
+	                android:inputType="textPersonName"
+	                android:background="@android:color/transparent"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_name_edit"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_name_edit"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_margin="5dp"
+	                android:src="@drawable/icon_profile_edit"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_status"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal"
+	        android:visibility="gone">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_status"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_status"
+	                android:layout_width="20dp"
+	                android:layout_height="match_parent"
+	                android:padding="2dp"
+	                android:src="@drawable/icon_oval_invited"
+	                android:scaleType="fitCenter"/>
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_myprofile_content_status"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/iv_frag_myprofile_content_status"
+	                android:layout_marginLeft="5dp"
+	                android:singleLine="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="18sp"
+	                android:text="Busy"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_status_edit"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_status_edit"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_margin="5dp"
+	                android:src="@drawable/icon_profile_edit"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_phone"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_phone"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_phone"
+	                android:layout_width="20dp"
+	                android:layout_height="match_parent"
+	                android:padding="2dp"
+	                android:src="@drawable/icon_profile_phone"
+	                android:scaleType="fitCenter"/>
+	            
+	            <EditText
+	                android:id="@+id/edt_frag_myprofile_content_phone"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/iv_frag_myprofile_content_phone"
+	                android:layout_marginLeft="5dp"
+	                android:singleLine="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="18sp"
+	                android:text="+12112"
+	                android:inputType="textPhonetic"
+	                android:background="@android:color/transparent"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_verify_section"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="3"
+	            android:visibility="gone">
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_myprofile_verify_status"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                android:textColor="@color/color_myprofile_verified"
+	                android:textSize="16sp"
+	                android:text="@string/verified"/>
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_verify_status"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_toLeftOf="@+id/txt_frag_myprofile_verify_status"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginBottom="5dp"
+	                android:src="@drawable/icon_verified"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_email"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_email"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_email"
+	                android:layout_width="20dp"
+	                android:layout_height="match_parent"
+	                android:padding="2dp"
+	                android:src="@drawable/icon_profile_message"
+	                android:scaleType="fitCenter"/>
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_myprofile_content_email"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/iv_frag_myprofile_content_email"
+	                android:layout_marginLeft="5dp"
+	                android:singleLine="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="18sp"
+	                android:text="test@gmail.com"/>
+	        </RelativeLayout>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_pwd"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_pwd"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_pwd"
+	                android:layout_width="20dp"
+	                android:layout_height="match_parent"
+	                android:padding="2dp"
+	                android:src="@drawable/icon_profile_pwd"
+	                android:scaleType="fitCenter"/>
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_myprofile_content_pwd"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/iv_frag_myprofile_content_pwd"
+	                android:layout_marginLeft="5dp"
+	                android:singleLine="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="18sp"
+	                android:text="@string/change_pwd"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_pwd_edit"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_pwd_edit"
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+					android:layout_centerInParent="true"	                
+	                android:src="@drawable/icon_arrow_gray"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_myprofile_content_mypast_events"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:orientation="horizontal"
+	        android:visibility="visible">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_mypast_events"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="9">
+	            
+	            <TextView 
+	                android:id="@+id/txt_frag_myprofile_content_mypast_events"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginLeft="25dp"
+	                android:textColor="@color/color_text_blue_5d90cf"
+	                android:textSize="18sp"
+	                android:text="@string/mypast_events"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_myprofile_content_mypast_events_edit"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_myprofile_content_mypast_events"
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+					android:layout_centerInParent="true"	                
+	                android:src="@drawable/icon_arrow_gray"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_myprofile_content_myhosted_events"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="2">
+
+	        <Button
+	            android:id="@+id/btn_frag_myprofile_content_myhosted_events"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_marginBottom="10dp"
+	            android:padding="5dp"
+	            android:textColor="@color/color_purple"
+	            android:textSize="18sp"
+	            android:text="@string/my_hosted_events"
+	            android:background="@drawable/bg_round_white_10"
+	            android:visibility="gone"/>	        
+	    </RelativeLayout>
+	</LinearLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/rl_frag_myprofile_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

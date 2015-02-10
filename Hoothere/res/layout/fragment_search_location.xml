@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_light_gray_f9f9f9">
+    
+	<RelativeLayout
+	    android:id="@+id/rl_frag_search_location_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:padding="10dp"
+	    android:layout_marginTop="20dp">
+
+	    <TextView
+	        android:id="@+id/txt_frag_search_location_content_header"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/color_text_dark_gray_666666"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:text="@string/search_location_title"/>
+
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_search_location_content_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/txt_frag_search_location_content_header"
+	        android:layout_marginTop="10dp">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_search_location_content_searchbox"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@+id/rl_frag_search_location_content_search_cancel"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="10dp"
+	            android:background="@drawable/bg_round_gray_d9dada"
+	            android:padding="5dp">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_search_location_content_searchicon"
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/icon_search"
+	                android:scaleType="fitCenter"/>
+
+	            <EditText
+	                android:id="@+id/edt_frag_search_location_content_searchbox"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/iv_frag_search_location_content_searchicon"
+	                android:layout_marginLeft="10dp"
+	                android:layout_marginRight="10dp"
+	              	android:layout_marginTop="5dp"
+	                android:layout_marginBottom="5dp"
+	                android:layout_centerVertical="true"
+	                android:background="@android:color/transparent"
+	                android:textColor="@android:color/black"
+	                android:textSize="18sp"
+	                android:text=""
+	                android:singleLine="true"
+	                android:inputType="textPostalAddress"
+	                android:textColorHint="@color/color_text_gray_858585"
+	                android:hint="Search Location"/>
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_search_location_content_search_close"
+	                android:layout_width="15dp"
+	                android:layout_height="15dp"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"
+	                android:src="@drawable/icon_search_close"
+	                android:scaleType="fitCenter"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_search_location_content_search_cancel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true">
+
+	            <TextView
+	                android:id="@+id/txt_frag_search_location_content_search_cancel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:textColor="@color/color_search_cancel_007aff"
+	                android:textSize="16sp"
+	                android:text="@string/search_location_cancel"/>	                	            
+	        </RelativeLayout>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_search_location_result"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="10dp"
+	        android:layout_below="@+id/rl_frag_search_location_content_bar">
+	        
+	        <ListView
+	            android:id="@+id/lv_frag_search_location_result"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"	        
+	            android:clipToPadding="false"/>
+	    </RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

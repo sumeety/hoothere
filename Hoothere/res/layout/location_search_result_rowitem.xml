@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<LinearLayout 
+	    android:id="@+id/ll_location_search_result_parent"
+	    android:layout_width="match_parent"
+	    android:layout_height="70dp"
+        android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:layout_centerVertical="true"
+	    android:orientation="horizontal">
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_location_search_result_icon"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1">
+	        
+	        <ImageView
+	            android:id="@+id/iv_location_search_result_icon"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_marginBottom="5dp"
+	            android:src="@drawable/icon_destination_pin_purple"
+	            android:scaleType="fitCenter"/>
+	    </RelativeLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_location_search_result_address"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="9"
+	        android:paddingLeft="10dp"
+	        android:orientation="vertical">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_location_search_result_venue"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="6">
+	            
+	            <TextView
+	                android:id="@+id/txt_location_search_result_venue"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="20sp"
+	                android:text="Here"
+	                android:singleLine="true"/>
+	        </RelativeLayout>
+	        
+   	        <RelativeLayout 
+	            android:id="@+id/rl_location_search_result_city"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="4">
+	            
+	            <TextView
+	                android:id="@+id/txt_location_search_result_city"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="16sp"
+	                android:text="There"
+	                android:singleLine="true"/>
+	        </RelativeLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

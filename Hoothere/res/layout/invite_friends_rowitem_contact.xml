@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	xmlns:app="http://schemas.android.com/apk/res/com.sumeet.hoothere"
+    android:background="@drawable/listview_selector_gray">
+    
+    <RelativeLayout 
+        android:id="@+id/rl_invite_friends_rowitem_contact"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true">
+        
+        <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_invite_friends_rowitem_contact_avatar"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+	           	<ImageView	            
+                    android:id="@+id/iv_invite_friends_rowitem_contact_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/defaultpic"
+                    android:scaleType="centerCrop"/>
+	            
+	            <ImageView
+	                android:id="@+id/iv_invite_friends_rowitem_contact_avatar_cover_white"
+	                android:layout_width="60dp"
+	                android:layout_height="60dp"
+	                android:src="@drawable/icon_avatar_cover_white"
+	                android:scaleType="centerCrop"/>
+	        </RelativeLayout>
+	        
+	        <LinearLayout 
+	            android:id="@+id/ll_invite_friends_rowitem_contact_name_status"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="3"
+	            android:paddingLeft="10dp"
+	            android:paddingRight="10dp"
+	            android:paddingTop="5dp"
+	            android:paddingBottom="5dp"
+	            android:orientation="vertical">
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_invite_friends_rowitem_contact_name"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1">
+	                
+					<TextView
+					    android:id="@+id/txt_invite_friends_rowitem_contact_name"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_centerVertical="true"
+					    android:textColor="@color/color_text_dark_gray_666666"
+					    android:layout_marginLeft="5dp"
+					    android:textSize="18sp"
+					    android:text="A"/>
+	            </RelativeLayout>
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_invite_friends_rowitem_contact_number"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1">
+	                
+	                <ImageView
+	                    android:id="@+id/iv_invite_friends_rowitem_contact_number"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="match_parent"
+	                    android:paddingTop="3dp"
+	                    android:paddingBottom="3dp"
+	                    android:src="@drawable/icon_phone"
+	                    android:scaleType="fitCenter"/>
+	                
+					<TextView
+					    android:id="@+id/txt_invite_friends_rowitem_contact_number"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_centerVertical="true"
+					    android:layout_toRightOf="@+id/iv_invite_friends_rowitem_contact_number"
+					    android:layout_marginLeft="5dp"
+					    android:textColor="@color/color_text_dark_gray_666666"
+					    android:textSize="15sp"
+					    android:text="+45 7891512"/>
+	            </RelativeLayout>
+	        </LinearLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/ll_invite_friends_rowitem_contact_action"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1">
+	            
+				
+				<LinearLayout 
+				    android:id="@+id/ll_invite_friends_rowitem_contact_action_accept"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:orientation="horizontal">
+					
+				    <RelativeLayout 
+				        android:layout_width="0dp"
+				        android:layout_height="match_parent"
+				        android:layout_weight="1">
+				    </RelativeLayout>
+				    
+				    
+				    <RelativeLayout 
+				        android:id="@+id/rl_invite_friends_rowitem_contact_action_accept"
+				        android:layout_width="0dp"
+				        android:layout_height="match_parent"
+				        android:layout_weight="1.5"
+				        android:paddingLeft="5dp">
+				        
+				        <ImageView
+				            android:id="@+id/iv_invite_friends_rowitem_contact_action_accept"
+				            android:layout_width="30dp"
+				            android:layout_height="30dp"
+				            android:layout_alignParentRight="true"
+				            android:layout_centerVertical="true"
+				            android:layout_marginRight="5dp"
+				            android:src="@drawable/icon_checkmark_uncheck"
+				            android:scaleType="fitCenter"/>
+				    </RelativeLayout>
+				</LinearLayout>
+			</RelativeLayout>
+		</LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

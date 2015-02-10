@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_signup_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_signup_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_signup_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/signup_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>
+    </RelativeLayout>
+    
+	<LinearLayout 
+	    android:id="@+id/ll_frag_signup_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/rl_frag_signup_header"
+	    android:padding="15dp"
+	    android:orientation="vertical">
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_signup_name"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="textPersonName"
+	            android:textColorHint="@color/color_text_pending_a5a5a5"
+	            android:hint="@string/signup_hint_firstname"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_email"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_signup_email"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="textEmailAddress"
+	            android:textColorHint="@color/color_text_pending_a5a5a5"
+	            android:hint="@string/signup_hint_email"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_mobile_number"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_signup_mobile_number"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="phone"
+	            android:textColorHint="@color/color_text_pending_a5a5a5"
+	            android:hint="@string/signup_hint_mobile_number"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_signup_password"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="textPassword"
+	            android:textColorHint="@color/color_text_pending_a5a5a5"
+	            android:hint="@string/signup_hint_password"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_confirm_password"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+	        <EditText
+	            android:id="@+id/edt_frag_signup_confirm_password"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:textColor="@color/color_text_dark_gray_666666"
+	            android:textSize="17sp"
+	            android:text=""
+	            android:inputType="textPassword"
+	            android:textColorHint="@color/color_text_pending_a5a5a5"
+	            android:hint="@string/signup_hint_confirm_pwd"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_create_account"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	    
+	        <Button
+	            android:id="@+id/btn_frag_signup_create_account"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:padding="5dp"
+	            android:textColor="@android:color/white"
+	            android:textSize="18sp"
+	            android:text="@string/signup_create_account"
+	            android:background="@drawable/bg_round_purple"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_or"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_signup_divider_left"
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_centerVertical="true"
+	            android:layout_toLeftOf="@+id/txt_frag_signup_or"
+	            android:layout_marginRight="5dp"
+	            android:background="@color/color_text_pending_a5a5a5"/>
+	        
+	        <TextView
+	            android:id="@+id/txt_frag_signup_or"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:textColor="@color/color_text_gray_858585"
+	            android:textSize="17sp"
+	            android:text="@string/signup_or"/>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_signup_divider_right"
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@+id/txt_frag_signup_or"
+	            android:layout_marginLeft="5dp"
+	            android:background="@color/color_text_pending_a5a5a5"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_fb"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingTop="7dp"
+	        android:paddingBottom="7dp"
+	        android:background="@drawable/bg_round_fb"
+	        android:visibility="visible">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_signup_fb_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="5dp"
+	            android:layout_centerInParent="true">
+	            
+	            <ImageView
+	                android:id="@+id/iv_frag_signup_fb_button"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginTop="5dp"
+	                android:layout_marginBottom="5dp"
+	                android:src="@drawable/icon_fb_white_bg"/>
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_signup_fb"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/iv_frag_signup_fb_button"
+	                android:layout_marginLeft="15dp"
+	                android:layout_centerVertical="true"
+	                android:textColor="@android:color/white"
+	                android:textSize="17sp"
+	                android:text="@string/signup_fb_sign"/>
+	        </RelativeLayout>	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_fb_new"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:visibility="gone">
+	        
+		    <com.facebook.widget.LoginButton
+		        android:id="@+id/fb_login_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        facebook:fetch_user_info="true"/>
+	        	        
+	    </RelativeLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_signup_termsof_service_parent"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_signup_termsof_service"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginBottom="20dp">
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_signup_termsof_service_title"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:textColor="@color/color_text_dark_gray_666666"
+	                android:textSize="11sp"
+	                android:text="@string/signup_terms_of_use_title"/>
+	            
+	            <TextView
+	                android:id="@+id/txt_frag_signup_termsof_service"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_toRightOf="@+id/txt_frag_signup_termsof_service_title"
+	                android:layout_marginLeft="10dp"
+	                android:textColor="@color/color_purple"
+	                android:textSize="13sp"
+	                android:text="@string/signup_terms_of_use"/>
+	        </RelativeLayout>
+	    </RelativeLayout>
+	</LinearLayout>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_signup_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

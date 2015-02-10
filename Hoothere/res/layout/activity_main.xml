@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sumeet.hoothere.MainActivity"
+    android:background="@android:color/white">
+
+    <FrameLayout 
+        android:id="@+id/container"
+        android:name="com.sumeet.hoothere.FragmentHome"
+        android:layout_width="fill_parent"        
+        android:layout_height="match_parent" 
+       	android:layout_above="@+id/rl_main_tabbar_divider"/>    
+        
+    <RelativeLayout 
+        android:id="@+id/rl_main_tabbar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_main_tabbar_footer"
+        android:background="@color/color_text_dark_gray_666666"
+        android:visibility="gone"/>
+        
+    <LinearLayout 
+        android:id="@+id/ll_main_tabbar_footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:visibility="gone">
+        
+        <LinearLayout 
+            android:id="@+id/ll_main_tabbar_footer_events"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_events_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp">
+                
+                <ImageView
+                    android:id="@+id/iv_main_tabbar_footer_events_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/events_selected"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_events_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+                
+                <TextView
+                    android:id="@+id/txt_main_tabbar_footer_events_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_purple"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:text="@string/main_tabbar_footer_events"/>
+            </RelativeLayout>                
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_main_tabbar_footer_friends"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_friends_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp">
+                
+                <ImageView
+                    android:id="@+id/iv_main_tabbar_footer_friends_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/friends"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_friends_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+                
+                <TextView
+                    android:id="@+id/txt_main_tabbar_footer_friends_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_text_dark_gray_666666"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:text="@string/main_tabbar_footer_friends"/>
+            </RelativeLayout>                
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_main_tabbar_footer_notifications"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_notifications_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp">
+                
+                <RelativeLayout 
+	                android:id="@+id/rl_main_tabbar_footer_notification_badge"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:paddingLeft="4dp"
+	                android:paddingRight="4dp"
+	                android:background="@drawable/bg_badge_red"
+	                android:visibility="gone">
+	                
+	                <TextView
+	                    android:id="@+id/txt_main_tabbar_footer_notification_badge"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:textColor="@android:color/white"
+	                    android:textSize="10dp"
+	                    android:text="0"/>
+		       	</RelativeLayout>
+                
+                <ImageView
+                    android:id="@+id/iv_main_tabbar_footer_notifications_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/notifications"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_notifications_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+                
+                <TextView
+                    android:id="@+id/txt_main_tabbar_footer_notifications_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_text_dark_gray_666666"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:text="@string/main_tabbar_footer_notifications"/>
+            </RelativeLayout>                
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/ll_main_tabbar_footer_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_me_icon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_margin="5dp">
+                
+                <ImageView
+                    android:id="@+id/iv_main_tabbar_footer_me_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/me"
+                    android:scaleType="fitCenter"/>
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/rl_main_tabbar_footer_me_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+                
+                <TextView
+                    android:id="@+id/txt_main_tabbar_footer_me_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_text_dark_gray_666666"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:text="@string/main_tabbar_footer_me"/>
+            </RelativeLayout>                
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_main_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        
+        <ImageView 
+            android:id="@+id/iv_main_logo_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_logo_bg"
+            android:scaleType="fitXY"/>
+        
+        <ImageView
+            android:id="@+id/iv_main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/icon_logo"/>
+    </RelativeLayout>
+</RelativeLayout>

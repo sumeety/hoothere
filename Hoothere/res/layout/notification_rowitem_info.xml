@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/listview_selector_gray">
+    
+	<RelativeLayout
+	    android:id="@+id/rl_notification_rowitem_info_parent"
+	    android:layout_width="match_parent"
+	    android:layout_height="70dp"
+	    android:layout_centerVertical="true">
+	    
+	    <ImageView 
+	        android:id="@+id/iv_notification_rowitem_info_avatar"
+	        android:layout_width="50dp"
+	        android:layout_height="match_parent"
+	        android:layout_margin="10dp"
+	        android:src="@drawable/defaultpic"
+	        android:scaleType="centerCrop"/>
+	    
+	    <TextView
+	        android:id="@+id/txt_notification_rowitem_info_content"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/iv_notification_rowitem_info_avatar"
+	        android:layout_margin="10dp"
+	        android:layout_centerVertical="true"
+	        android:textColor="@android:color/black"
+	        android:textSize="17sp"
+	        android:text="A"
+	        android:maxLines="2"/>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_notification_rowitem_info_divider"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginLeft="30dp"
+	        android:layout_alignParentBottom="true"
+	        android:background="@color/color_text_dark_gray_666666"/>
+	</RelativeLayout>
+</RelativeLayout>

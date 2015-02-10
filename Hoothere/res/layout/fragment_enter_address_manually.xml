@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_enter_address_manually_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_enter_address_manually_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_enter_address_manually_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:layout_marginLeft="30dp"
+		        android:gravity="center"
+		        android:text=""
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:singleLine="true"
+		        android:textColor="@android:color/white"/>
+		</RelativeLayout>        
+    </RelativeLayout>
+    
+	<LinearLayout 
+        android:id="@+id/ll_frag_enter_address_manually"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/rl_frag_enter_address_manually_header"
+        android:padding="10dp"
+        android:orientation="vertical">
+           
+        <LinearLayout 
+            android:id="@+id/ll_frag_enter_address_manually_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            
+         	<RelativeLayout 
+             	android:id="@+id/rl_frag_enter_address_manually_content"
+             	android:layout_width="match_parent"
+             	android:layout_height="wrap_content"
+             	android:background="@color/color_light_gray_f7f7f7">
+             
+             	<EditText
+                 	android:id="@+id/edt_frag_enter_address_manually_venue"
+                 	android:layout_width="match_parent"
+                 	android:layout_height="wrap_content"
+                 	android:layout_centerVertical="true"
+                 	android:layout_marginLeft="10dp"
+                 	android:layout_marginRight="10dp"
+                 	android:layout_marginTop="10dp"
+                 	android:layout_marginBottom="10dp"
+                 	android:gravity="start"
+                 	android:textColor="@color/color_text_dark_gray_666666"
+                 	android:textSize="17sp"
+                 	android:text=""
+                 	android:hint="@string/edit_event_content_venue_title"
+                 	android:background="@android:color/transparent"/>
+             
+         	</RelativeLayout>
+         	
+         	<RelativeLayout 
+         	    android:id="@+id/rl_frag_enter_address_manually_location"
+         	    android:layout_width="match_parent"
+         	    android:layout_height="wrap_content"
+         	    android:layout_marginTop="10dp">
+         	    
+         	    <TextView
+         	        android:id="@+id/txt_frag_enter_address_manually_get_location"
+         	        android:layout_width="wrap_content"
+         	        android:layout_height="wrap_content"
+         	        android:layout_centerVertical="true"
+         	        android:textColor="@color/color_text_dark_gray_666666"
+         	        android:textSize="14sp"
+         	        android:text="@string/am_get_current_location"/>
+         	    
+         	    <ImageView
+				    android:id="@+id/iv_frag_enter_address_manually_location"
+				    android:layout_width="20dp"
+				    android:layout_height="20dp"
+				    android:layout_marginRight="10dp"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"					    
+				    android:src="@drawable/icon_location_map"
+				    android:scaleType="fitCenter"/>
+         	</RelativeLayout>
+         
+         	<RelativeLayout 
+             	android:id="@+id/rl_frag_enter_address_manually_street"
+             	android:layout_width="match_parent"
+             	android:layout_height="wrap_content"
+             	android:layout_marginTop="10dp"
+             	android:background="@color/color_light_gray_f7f7f7">
+             
+             	<EditText
+                 	android:id="@+id/edt_frag_enter_address_manually_street"
+                 	android:layout_width="match_parent"
+                 	android:layout_height="wrap_content"
+                 	android:layout_margin="10dp"
+                 	android:gravity="start"
+                 	android:textColor="@color/color_text_dark_gray_666666"
+                 	android:textSize="17sp"
+                 	android:text=""
+                 	android:hint="@string/edit_event_content_street_address"
+                 	android:background="@android:color/transparent"
+                 	android:minLines="2"/>
+         	</RelativeLayout>
+         
+         	<LinearLayout 
+             	android:id="@+id/ll_frag_edit_event_city_state"
+             	android:layout_width="match_parent"
+             	android:layout_height="wrap_content"
+             	android:layout_marginTop="10dp"
+             	android:orientation="horizontal">
+             
+             	<RelativeLayout 
+	              	android:id="@+id/rl_frag_enter_address_manually_city"
+	              	android:layout_width="0dp"
+	              	android:layout_height="wrap_content"
+	              	android:layout_weight="1"
+	              	android:layout_marginRight="5dp"
+	              	android:background="@color/color_light_gray_f7f7f7">
+              
+	              	<EditText
+	                  	android:id="@+id/edt_frag_enter_address_manually_city"
+	                  	android:layout_width="match_parent"
+	                  	android:layout_height="wrap_content"
+	                  	android:layout_margin="10dp"
+	                  	android:gravity="start"
+	                  	android:layout_centerInParent="true"
+	                  	android:textColor="@color/color_text_dark_gray_666666"
+	                  	android:textSize="17sp"
+	                  	android:text=""
+	                  	android:hint="@string/edit_event_content_city"
+	                  	android:background="@android:color/transparent"/>
+          		</RelativeLayout>
+          
+             	<RelativeLayout 
+              		android:id="@+id/rl_frag_enter_address_manually_state"
+	              	android:layout_width="0dp"
+	              	android:layout_height="wrap_content"
+	              	android:layout_weight="1"
+	              	android:layout_marginLeft="5dp"
+	              	android:background="@color/color_light_gray_f7f7f7">
+              
+              		<EditText
+	                  	android:id="@+id/edt_frag_enter_address_manually_state"
+	                  	android:layout_width="match_parent"
+	                  	android:layout_height="wrap_content"
+	                  	android:layout_margin="10dp"
+	                  	android:layout_centerInParent="true"
+	                  	android:gravity="start"
+	                  	android:textColor="@color/color_text_dark_gray_666666"
+	                  	android:textSize="17sp"
+	                  	android:text=""
+	                  	android:hint="@string/edit_event_content_state"
+	                  	android:background="@android:color/transparent"/>
+          		</RelativeLayout>
+         	</LinearLayout>
+         
+         	<LinearLayout 
+             	android:id="@+id/ll_frag_edit_event_country_zip"
+             	android:layout_width="match_parent"
+             	android:layout_height="wrap_content"
+             	android:layout_marginTop="10dp"
+             	android:orientation="horizontal">
+             
+             	<RelativeLayout 
+	              	android:id="@+id/rl_frag_enter_address_manually_country"
+	              	android:layout_width="0dp"
+	              	android:layout_height="wrap_content"
+	              	android:layout_weight="1"
+	              	android:layout_marginRight="5dp"
+	              	android:background="@color/color_light_gray_f7f7f7">
+              
+	              	<EditText
+	                  	android:id="@+id/edt_frag_enter_address_manually_country"
+	                  	android:layout_width="match_parent"
+	                  	android:layout_height="wrap_content"
+	                  	android:layout_margin="10dp"
+	                  	android:layout_centerInParent="true"
+	                  	android:gravity="start"
+	                  	android:textColor="@color/color_text_dark_gray_666666"
+	                  	android:textSize="17sp"
+	                  	android:text=""
+	                  	android:hint="@string/edit_event_content_country"
+	                  	android:background="@android:color/transparent"/>
+          		</RelativeLayout>
+          
+             	<RelativeLayout 
+              		android:id="@+id/rl_frag_enter_address_manually_zipcode"
+              		android:layout_width="0dp"
+              		android:layout_height="wrap_content"
+              		android:layout_weight="1"
+              		android:layout_marginLeft="5dp"
+             		android:background="@color/color_light_gray_f7f7f7">
+              
+	              	<EditText
+	                  	android:id="@+id/edt_frag_enter_address_manually_zipcode"
+	                  	android:layout_width="match_parent"
+	                  	android:layout_height="wrap_content"
+	                  	android:layout_margin="10dp"
+	                  	android:layout_centerInParent="true"
+	                  	android:gravity="start"
+	                  	android:textColor="@color/color_text_dark_gray_666666"
+	                  	android:textSize="17sp"
+	                  	android:text=""
+	                  	android:hint="@string/edit_event_content_zipcode"
+	                  	android:background="@android:color/transparent"
+	                  	android:inputType="number"/>
+          		</RelativeLayout>
+         	</LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+	        android:id="@+id/ll_frag_enter_address_manually_actions"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="40dp"
+	        android:orientation="horizontal">
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_enter_address_manually_skip"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1">
+	            
+	            <Button
+	                android:id="@+id/btn_frag_enter_address_manually_skip"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dp"
+	                android:paddingTop="5dp"
+	                android:paddingBottom="5dp"
+	                android:background="@drawable/bg_round_white_10"
+	                android:textColor="@color/color_purple"
+	                android:textSize="18sp"
+	                android:text="@string/am_skip"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_enter_address_manually_next"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1">
+	            
+	            <Button
+	                android:id="@+id/btn_frag_enter_address_manually_next"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:paddingTop="5dp"
+	                android:paddingBottom="5dp"
+	                android:background="@drawable/bg_round_purple"
+	                android:textColor="@color/color_white"
+	                android:textSize="18sp"
+	                android:text="@string/am_next"/>
+	        </RelativeLayout>	        
+	    </LinearLayout>
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_enter_address_manually_header">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>

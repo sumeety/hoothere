@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res/com.sumeet.hoothere">
+    
+	<RelativeLayout 
+        android:id="@+id/rl_frag_event_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_purple">
+        
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:padding="10dp">
+		    
+		    <ImageView
+		        android:id="@+id/iv_frag_event_detail_header_back"
+		        android:layout_width="30dp"
+		        android:layout_height="45dp"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingRight="10dp"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/icon_header_back_white"
+		        android:scaleType="fitCenter"/>
+		    
+		    <TextView
+		        android:id="@+id/txt_frag_event_detail_header_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:gravity="center"
+		        android:text="@string/event_detail_title"
+		        android:textSize="20sp"
+		        android:textStyle="bold"
+		        android:textColor="@android:color/white"/>
+		    
+		    <TextView
+			    android:id="@+id/txt_frag_event_detail_edit"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:textColor="@android:color/white"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:text="@string/event_detail_edit"/>		    
+		</RelativeLayout>        
+    </RelativeLayout>
+
+	<RelativeLayout 
+	    android:id="@+id/rl_frag_event_detail_contents"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/rl_frag_event_detail_header"
+	    android:background="@color/color_bg_light_f3f3f3">
+	    
+	    <LinearLayout 
+	        android:id="@+id/ll_frag_event_detail_contents_hoster_guests_loc_date"
+	        android:layout_width="match_parent"
+	        android:layout_height="150dp"
+	        android:orientation="horizontal"
+	        android:background="@android:color/white">
+	        
+	        <LinearLayout 
+	            android:id="@+id/ll_frag_event_detail_contents_hoster"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:padding="10dp"
+	            android:orientation="vertical">
+	            
+	            <RelativeLayout 
+	                android:id="@+id/rl_frag_event_detail_contents_hoster_avatar"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="2">
+	                
+	                <com.sumeet.hoothere.ui.CircularImageView
+	                    android:id="@+id/iv_frag_event_detail_content_avatar"
+	                    android:layout_width="60dp"
+	                    android:layout_height="60dp"
+	                    android:layout_centerInParent="true"
+	                    android:src="@drawable/icon_temp_avatar1"
+	                    android:scaleType="fitCenter"
+	                    app:border_width="0dp"/>
+	            </RelativeLayout>
+	            
+	            <RelativeLayout 
+	            	android:id="@+id/rl_frag_event_detail_hoster_title"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1">
+	                    
+	                <TextView
+	                	android:id="@+id/txt_frag_event_detail_hoster_title"
+	                	android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@color/color_text_gray_858585"
+	                    android:textSize="15sp"
+	                    android:text="@string/hosted_by"
+	                    android:singleLine="true"/>
+	            </RelativeLayout>
+	                
+	            <RelativeLayout 
+	            	android:id="@+id/rl_frag_event_detail_hoster_name"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1">
+	                    
+	                <TextView
+	                    android:id="@+id/txt_frag_event_detail_hoster_name"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerInParent="true"
+	                    android:textColor="@color/color_text_blue_5d90cf"
+	                    android:textSize="16sp"
+	                    android:text="A"
+	                    android:singleLine="true"/>
+	            </RelativeLayout>
+	        </LinearLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_event_detail_hoster_divider"
+	            android:layout_width="1dp"
+	            android:layout_height="match_parent"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:background="@color/color_pending_text"/>
+	        
+	        <LinearLayout 
+	            android:id="@+id/ll_frag_event_detail_guests_loc_date"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2.2"
+	            android:orientation="vertical">
+	            
+	            <LinearLayout
+	                android:id="@+id/ll_frag_event_detail_guests"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1"
+	                android:orientation="horizontal">
+	                
+	                <LinearLayout 
+	                    android:id="@+id/ll_frag_event_detail_guests_hoocame"
+	                    android:layout_width="0dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_weight="1"
+	                    android:orientation="vertical">
+	                    
+	                    <RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_hoocame_cnt"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="2">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_hoocame_cnt"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentBottom="true"
+	                            android:layout_marginBottom="10dp"
+	                            android:textColor="@color/color_hoocame_7363c6"
+	                            android:textSize="17sp"
+	                            android:text="5"/>
+	                    </RelativeLayout>
+	                    
+						<RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_hoocame_title"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="1">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_hoocame_title"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentTop="true"
+	                            android:textColor="@color/color_pending_text"
+	                            android:textSize="10sp"
+	                            android:text="@string/hoocame_title"
+	                            android:gravity="center"/>
+	                    </RelativeLayout>	                    
+	                </LinearLayout>
+	                
+	                <RelativeLayout 
+	                    android:layout_width="1dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginTop="10dp"
+	                    android:layout_marginBottom="5dp"
+	                    android:background="@color/color_pending_text"/>
+	                
+					<LinearLayout 
+	                    android:id="@+id/ll_frag_event_detail_guests_invited"
+	                    android:layout_width="0dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_weight="1"
+	                    android:orientation="vertical">
+	                    
+	                    <RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_invited_cnt"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="2">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_invited_cnt"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentBottom="true"
+	                            android:layout_marginBottom="10dp"
+	                            android:textColor="@color/color_busy_ef5731"
+	                            android:textSize="17sp"
+	                            android:text="1"/>
+	                    </RelativeLayout>
+	                    
+						<RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_invited_title"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="1">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_invited_title"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentTop="true"
+	                            android:textColor="@color/color_pending_text"
+	                            android:textSize="10sp"
+	                            android:text="@string/invited_title"
+	                            android:gravity="center"/>
+	                    </RelativeLayout>	                    
+	                </LinearLayout>	 
+	                
+					<RelativeLayout 
+	                    android:layout_width="1dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginTop="10dp"
+	                    android:layout_marginBottom="5dp"
+	                    android:background="@color/color_pending_text"/>
+	                
+					<LinearLayout 
+	                    android:id="@+id/ll_frag_event_detail_guests_goingthere"
+	                    android:layout_width="0dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_weight="1"
+	                    android:orientation="vertical">
+	                    
+	                    <RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_goingthere_cnt"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="2">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_goingthere_cnt"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentBottom="true"
+	                            android:layout_marginBottom="10dp"
+	                            android:textColor="@color/color_text_accepted_light_green_9de7bd"
+	                            android:textSize="17sp"
+	                            android:text="2"/>
+	                    </RelativeLayout>
+	                    
+						<RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_goingthere_title"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="1">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_goingthere_title"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentTop="true"
+	                            android:textColor="@color/color_pending_text"
+	                            android:textSize="10sp"
+	                            android:text="@string/going_title"
+	                            android:gravity="center"/>
+	                    </RelativeLayout>	                    
+	                </LinearLayout>
+	                
+					<RelativeLayout 
+	                    android:layout_width="1dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_marginTop="10dp"
+	                    android:layout_marginBottom="5dp"
+	                    android:background="@color/color_pending_text"/>
+	                
+					<LinearLayout 
+	                    android:id="@+id/ll_frag_event_detail_guests_hoothere"
+	                    android:layout_width="0dp"
+	                    android:layout_height="match_parent"
+	                    android:layout_weight="1"
+	                    android:orientation="vertical">
+	                    
+	                    <RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_hoothere_cnt"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="2">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_hoothere_cnt"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentBottom="true"
+	                            android:layout_marginBottom="10dp"
+	                            android:textColor="@color/color_purple"
+	                            android:textSize="17sp"
+	                            android:text="2"/>
+	                    </RelativeLayout>
+	                    
+						<RelativeLayout 
+	                        android:id="@+id/rl_frag_event_detail_guests_hoothere_title"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="0dp"
+	                        android:layout_weight="1">
+	                        
+	                        <TextView
+	                            android:id="@+id/txt_frag_event_detail_guests_hoothere_title"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerHorizontal="true"
+	                            android:layout_alignParentTop="true"
+	                            android:textColor="@color/color_pending_text"
+	                            android:textSize="10sp"
+	                            android:text="@string/hoothere_title"
+	                            android:gravity="center"/>
+	                    </RelativeLayout>	                    
+	                </LinearLayout>
+	            </LinearLayout>
+	            
+	            <RelativeLayout 
+	                android:layout_width="match_parent"
+	                android:layout_height="1dp"
+	                android:background="@color/color_pending_text"/>
+	            
+	            <LinearLayout 
+	                android:id="@+id/ll_frag_event_detail_venue_starttime"
+	                android:layout_width="match_parent"
+	                android:layout_height="0dp"
+	                android:layout_weight="1"
+	                android:orientation="vertical">
+	                
+	                <RelativeLayout 
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"/>
+	                
+	                <RelativeLayout
+		                android:id="@+id/rl_frag_event_detail_location_1"
+		                android:layout_width="match_parent"
+		                android:layout_height="0dp"
+		                android:layout_weight="1"
+		                android:paddingLeft="10dp"
+		                android:paddingTop="5dp">
+		                
+		                <ImageView 
+		                    android:id="@+id/iv_frag_event_detail_location_icon"
+		                    android:layout_width="20dp"
+		                    android:layout_height="20dp"
+		                    android:layout_centerVertical="true"
+		                    android:src="@drawable/icon_location_gray"
+		                    android:scaleType="fitCenter"/>
+		                
+		                <TextView
+		                    android:id="@+id/txt_frag_event_detail_location_1"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_toRightOf="@+id/iv_frag_event_detail_location_icon"
+		                    android:layout_marginLeft="10dp"
+		                    android:layout_centerVertical="true"
+		                    android:singleLine="true"
+		                    android:textColor="@color/color_text_blue_5d90cf"
+		                    android:textSize="15sp"
+		                    android:text="Here"/>
+	            	</RelativeLayout>
+	            	
+	                <RelativeLayout 
+			            android:id="@+id/rl_frag_event_detail_start_time"
+			            android:layout_width="match_parent"
+			            android:layout_height="0dp"
+			            android:layout_weight="1"
+			            android:paddingLeft="13dp">
+			            
+			            <ImageView
+			                android:id="@+id/iv_frag_event_detail_start_time"
+			                android:layout_width="15dp"
+			                android:layout_height="15dp"
+			                android:layout_centerVertical="true"
+			                android:src="@drawable/icon_clock"
+			                android:scaleType="fitCenter"/>
+			            
+			            <TextView
+			                android:id="@+id/txt_frag_event_detail_start_time"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_centerVertical="true"
+			                android:layout_toRightOf="@+id/iv_frag_event_detail_start_time"
+			                android:layout_marginLeft="10dp"
+			                android:textColor="@color/color_text_dark_gray_666666"
+			                android:textSize="15sp"
+			                android:text="Today at 17:00 PM"/>
+			        </RelativeLayout>
+			        
+	                <RelativeLayout 
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.2"/>
+	            </LinearLayout>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_event_detail_tabs"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_below="@+id/ll_frag_event_detail_contents_hoster_guests_loc_date">
+	    
+		    <LinearLayout 
+		        android:id="@+id/ll_frag_event_detail_tabs"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_marginBottom="1dp"
+		        android:orientation="horizontal">
+		        
+		        <RelativeLayout 
+		            android:id="@+id/rl_frag_event_detail_tabs_info"
+		            android:layout_width="0dp"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:paddingTop="7dp"
+		            android:paddingBottom="7dp">
+		            
+		            <ImageView
+		                android:id="@+id/iv_frag_event_detail_tabs_info"
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:src="@drawable/icon_event_detailinfo_purple"
+		                android:scaleType="fitCenter"/>
+		        </RelativeLayout>
+		        
+		        <RelativeLayout 
+		            android:layout_width="1dp"
+		            android:layout_height="match_parent"
+		            android:background="@color/color_pending_text"/>
+		        
+				<RelativeLayout 
+		            android:id="@+id/rl_frag_event_detail_tabs_eventalbums"
+		            android:layout_width="0dp"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:paddingTop="9dp"
+		            android:paddingBottom="9dp">
+		            
+		            <ImageView
+		                android:id="@+id/iv_frag_event_detail_tabs_eventalbums"
+		                android:layout_width="match_parent"
+		                android:layout_height="match_parent"
+		                android:src="@drawable/icon_event_album_gray"
+		                android:scaleType="fitCenter"/>
+		        </RelativeLayout>		        
+		    </LinearLayout>
+		    
+		    <RelativeLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_alignParentBottom="true"
+		        android:background="@color/color_pending_text"/>
+		</RelativeLayout>
+		
+	    <RelativeLayout 
+	        android:id="@+id/rl_frag_event_detail_information_contents"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_below="@+id/rl_frag_event_detail_tabs">
+		    
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_event_detail_information_detailed"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent">
+		    
+		        <ScrollView 
+		            android:id="@+id/sv_frag_event_detail_information_contents"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:layout_above="@+id/rl_frag_event_detail_all_actions">
+		            
+		        
+					<LinearLayout
+				        android:id="@+id/ll_frag_event_detail_content"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:orientation="vertical"
+				        android:paddingLeft="10dp"
+				        android:paddingRight="10dp"
+				        android:paddingTop="10dp"
+				        android:paddingBottom="10dp">
+					    
+				        <RelativeLayout 
+				            android:id="@+id/rl_frag_event_detail_content_title"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content">
+				            
+				            <TextView
+				                android:id="@+id/txt_frag_event_detail_content_title"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:textColor="@color/color_text_dark_gray_666666"
+				                android:textSize="18sp"
+				                android:textStyle="bold"
+				                android:text="A"/>
+				        </RelativeLayout>
+				        
+				        <RelativeLayout 
+				            android:id="@+id/rl_frag_event_detail_description"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:layout_marginTop="10dp">
+				            
+				            <TextView
+				                android:id="@+id/txt_frag_event_detail_description"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:textColor="@color/color_text_gray_858585"
+				                android:textSize="17sp"
+				                android:text="This is test description."/>
+				        </RelativeLayout>
+				        
+				        <RelativeLayout 
+				            android:id="@+id/rl_frag_event_detail_event_type"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:layout_marginTop="20dp"
+				            android:visibility="visible">
+				            
+				            <ImageView
+				                android:id="@+id/iv_frag_event_detail_event_type"
+				                android:layout_width="15dp"
+				                android:layout_height="15dp"
+				                android:layout_centerVertical="true"
+				                android:src="@drawable/icon_private_event"
+				                android:scaleType="fitCenter"/>
+				            
+				            <TextView
+				                android:id="@+id/txt_frag_event_detail_event_type"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_toRightOf="@+id/iv_frag_event_detail_event_type"
+				                android:layout_marginLeft="5dp"
+				                android:textColor="@color/color_text_gray_858585"
+				                android:textSize="17sp"
+				                android:text="@string/event_type_private"/>				                
+				        </RelativeLayout>
+			        
+				        <LinearLayout 
+				            android:id="@+id/ll_frag_event_detail_location"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:layout_marginTop="10dp"
+				            android:orientation="vertical">
+				            
+				            <RelativeLayout
+				                android:id="@+id/rl_frag_event_detail_location_venue"
+				                android:layout_width="match_parent"
+				                android:layout_height="wrap_content"
+				                android:layout_marginTop="10dp">
+				                
+				                <ImageView 
+				                    android:id="@+id/iv_frag_event_detail_location_venue_icon"
+				                    android:layout_width="15dp"
+				                    android:layout_height="15dp"
+				                    android:layout_centerVertical="true"
+				                    android:src="@drawable/icon_location_gray"
+				                    android:scaleType="fitCenter"/>
+				                
+				                <TextView
+				                    android:id="@+id/txt_frag_event_detail_location_venue"
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="wrap_content"
+				                    android:layout_toRightOf="@+id/iv_frag_event_detail_location_venue_icon"
+				                    android:layout_marginLeft="5dp"
+				                    android:layout_centerVertical="true"
+				                    android:textColor="@color/color_text_blue_5d90cf"
+				                    android:textSize="17sp"
+				                    android:text=""/>
+				            </RelativeLayout>
+			                
+				            <RelativeLayout 
+				                android:id="@+id/rl_frag_event_detail_address"
+				                android:layout_width="match_parent"
+				                android:layout_height="wrap_content"
+				                android:layout_marginTop="5dp">
+				                
+				                <TextView
+				                    android:id="@+id/txt_frag_event_detail_location_address"
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="wrap_content"
+				                    android:layout_marginTop="5dp"
+				                    android:layout_marginLeft="20dp"
+				                    android:textColor="@color/color_text_gray_858585"
+				                    android:textSize="17sp"
+				                    android:text=""/>
+							</RelativeLayout>                
+			            </LinearLayout>
+			            
+				        <RelativeLayout 
+				            android:id="@+id/rl_frag_event_detail_end_time"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:layout_marginTop="10dp">
+				            
+				            <ImageView
+				                android:id="@+id/iv_frag_event_detail_end_time"
+				                android:layout_width="15dp"
+				                android:layout_height="15dp"
+				                android:layout_centerVertical="true"
+				                android:src="@drawable/icon_clock"
+				                android:scaleType="fitCenter"/>
+				            
+				            <TextView
+				                android:id="@+id/txt_frag_event_detail_start_end_time"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_centerVertical="true"
+				                android:layout_toRightOf="@+id/iv_frag_event_detail_end_time"
+				                android:layout_marginLeft="5dp"
+				                android:textColor="@color/color_text_gray_858585"
+				                android:textSize="13sp"
+				                android:text=""/>
+				        </RelativeLayout>
+					</LinearLayout>	 
+		        </ScrollView>
+				
+				<RelativeLayout 
+				    android:id="@+id/rl_frag_event_detail_all_actions"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true">
+				    
+					<LinearLayout
+					    android:id="@+id/rl_frag_event_detail_action"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:paddingLeft="10dp"
+					    android:paddingRight="10dp"
+					    android:paddingTop="10dp"
+					    android:paddingBottom="10dp"
+					    android:orientation="horizontal">
+					    
+					    <RelativeLayout 
+					        android:id="@+id/rl_frag_event_detail_action_cancel"
+					        android:layout_width="0dp"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1">
+					        
+					        <Button
+					            android:id="@+id/btn_frag_event_detail_action_cancel"
+					            android:layout_width="match_parent"
+					            android:layout_height="wrap_content"
+					            android:padding="5dp"
+					            android:layout_marginRight="5dp"
+					            android:textColor="@color/color_purple"
+					            android:textSize="18sp"
+					            android:text="@string/event_detail_cancel"
+					            android:background="@drawable/bg_round_white_10"/>
+					    </RelativeLayout>
+					    
+					    <RelativeLayout 
+					        android:id="@+id/rl_frag_event_detail_action_invite_friends"
+					        android:layout_width="0dp"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1">
+					        
+					        <Button
+					            android:id="@+id/btn_frag_event_detail_action_invite_friends"
+					            android:layout_width="match_parent"
+					            android:layout_height="wrap_content"
+					            android:padding="5dp"
+					            android:layout_marginLeft="5dp"
+					            android:textColor="@android:color/white"
+					            android:textSize="18sp"
+					            android:text="@string/event_detail_invite_friends"
+					            android:background="@drawable/bg_round_purple"/>
+					    </RelativeLayout>
+					</LinearLayout>
+					
+					<RelativeLayout 
+				        android:id="@+id/rl_frag_event_detail_action_join"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:paddingLeft="10dp"
+					    android:paddingRight="10dp"
+					    android:paddingTop="10dp"
+					    android:paddingBottom="10dp"
+					    android:visibility="gone">
+				        
+				        <Button
+				            android:id="@+id/btn_frag_event_detail_action_join"
+				            android:layout_width="match_parent"
+				            android:layout_height="wrap_content"
+				            android:padding="5dp"
+				            android:textColor="@color/color_purple"
+				            android:textSize="18sp"
+				            android:text="@string/event_detail_join"
+				            android:background="@drawable/bg_round_white_10"/>
+					</RelativeLayout>
+				</RelativeLayout>
+			</RelativeLayout>				
+			
+	        <RelativeLayout 
+	            android:id="@+id/rl_frag_event_detail_event_albums_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:visibility="visible">
+	            
+	            <ScrollView 
+	                android:id="@+id/sv_frag_event_detail_event_albums_content"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent">
+	                
+	                <LinearLayout 
+	                    android:id="@+id/ll_frag_event_detail_event_albums_content"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:orientation="vertical"
+	                    android:paddingTop="5dp"
+	                    android:paddingBottom="5dp">
+	                    
+	                </LinearLayout>
+	            </ScrollView>
+	        </RelativeLayout>
+	    </RelativeLayout>	    
+	</RelativeLayout>
+	
+	<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rl_frag_event_detail_header">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/header_shadow"
+            android:scaleType="fitXY"
+            android:alpha="0.3"/>
+    </RelativeLayout>
+</RelativeLayout>
